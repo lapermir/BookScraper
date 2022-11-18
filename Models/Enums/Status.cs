@@ -1,4 +1,4 @@
-namespace BookCrawler.API.Models.Enums;
+namespace BookScraper.API.Models.Enums;
 
 public enum Status
 {

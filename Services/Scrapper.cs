@@ -1,9 +1,9 @@
-using BookCrawler.API.Models;
-using BookCrawler.API.Models.Enums;
+using BookScraper.API.Models;
+using BookScraper.API.Models.Enums;
 using HtmlAgilityPack;
 
-namespace BookCrawler.API.Services;
-public static class Crawler
+namespace BookScraper.API.Services;
+public static class Scraper
 {
     private static string site { get; set; } = "https://openlibrary.org";
     private static string url { get; set; } = "https://openlibrary.org/search?mode=everything&q=";
@@ -11,9 +11,9 @@ public static class Crawler
 
     private static HtmlWeb web = new();
 
-    public static CrawlResult<Book> Search(string bookToSearch)
+    public static Result<Book> Search(string bookToSearch)
     {
-        CrawlResult<Book> output = new();
+        Result<Book> output = new();
 
         HtmlDocument doc = web.Load($"{url}={bookToSearch}");
 

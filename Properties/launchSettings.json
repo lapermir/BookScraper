@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "BookCrawler.API": {
+    "BookScraper.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

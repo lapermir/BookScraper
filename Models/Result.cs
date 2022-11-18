@@ -1,8 +1,8 @@
-using BookCrawler.API.Models.Enums;
+using BookScraper.API.Models.Enums;
 
-namespace BookCrawler.API.Models;
+namespace BookScraper.API.Models;
 
-public class CrawlResult<T>
+public class Result<T>
 {
     public List<T> Items { get; set; } = new();
     public Status Status { get; set; }

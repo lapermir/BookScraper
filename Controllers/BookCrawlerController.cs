@@ -1,18 +1,18 @@
-using BookCrawler.API.Models;
+using BookScraper.API.Models;
 using Microsoft.AspNetCore.Mvc;
-using BookCrawler.API.Services;
+using BookScraper.API.Services;
 
-namespace BookCrawler.API.Controller;
+namespace BookScraper.API.Controller;
 
 [ApiController]
 [Route("[controller]")]
-public class BookCrawlerController : ControllerBase
+public class BookScraperController : ControllerBase
 {
     [HttpGet("Index")]
     public List<Book> Index(string bookToSearch)
     {
-        CrawlResult<Book> output = new();
-        output = Crawler.Search(bookToSearch);
+        Result<Book> output = new();
+        output = Scraper.Search(bookToSearch);
 
         return output.Items;
     }

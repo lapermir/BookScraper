@@ -1,4 +1,4 @@
-namespace BookCrawler.API.Models;
+namespace BookScraper.API.Models;
 
 public class Book
 {
